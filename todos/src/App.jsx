@@ -4,30 +4,27 @@ import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo } from "./todoSlice";
+
 function App() {
-  const [todos, setTodos] = useState([]);
+  const dispatch = useDispatch();
+  const todos = useSelector((state) => state.todos);
   const [newTodo, setNewTodo] = useState("");
 
   const addNewTodo = () => {
-    if (newTodo.trim() != "") {
-      setTodos([
-        ...todos,
-        { id: todos.length + 1, todo: newTodo, hasEnded: false },
-      ]);
+    if (newTodo.trim() !== "") {
+      dispatch(addTodo(newTodo));
       setNewTodo("");
     }
   };
 
   const endTask = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos[index].hasEnded = !updatedTodos[index].hasEnded;
-    setTodos(updatedTodos);
+    dispatch(endTask(index));
   };
 
   const deleteTask = (id) => {
-    let updatedTodos = [...todos];
-    updatedTodos = updatedTodos.filter((todo) => todo.id != id);
-    setTodos(updatedTodos);
+    dispatch(deleteTask(id));
   };
 
   return (
