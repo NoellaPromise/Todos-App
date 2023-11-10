@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "./todoSlice";
+import { addTodo } from "./redux/todoSlice";
 
 function App() {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
-import { endTask, deleteTask } from "../todoSlice";
+import { endTask, deleteTask } from "../redux/todoSlice";
 function Todo(props) {
   const dispatch = useDispatch();
 
