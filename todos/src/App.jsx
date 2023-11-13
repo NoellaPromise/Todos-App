@@ -5,16 +5,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "./redux/todoSlice";
+import { addTask } from "./redux/todoSlice";
 
 function App() {
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos);
+
   const [newTodo, setNewTodo] = useState("");
 
-  const addNewTodo = () => {
+  const addNewTask = () => {
     if (newTodo.trim() !== "") {
-      dispatch(addTodo(newTodo));
+      dispatch(addTask(newTodo));
       setNewTodo("");
     }
   };
@@ -42,7 +43,7 @@ function App() {
           className="absolute right-2 cursor-pointer"
           icon={faCirclePlus}
           color="green"
-          onClick={addNewTodo}
+          onClick={addNewTask}
         />
       </div>
       {todos.map((todo, index) => (

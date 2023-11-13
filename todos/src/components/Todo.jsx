@@ -8,10 +8,7 @@ function Todo(props) {
   return (
     <div className="w-1/2 flex items-center justify-between py-2 my-4 border-b-2 border-gray-200 m-auto">
       <div className="flex space-x-2 items-center">
-        <input
-          onChange={() => dispatch(endTask(props.index))}
-          type="checkbox"
-        />
+        <input onChange={() => dispatch(endTask(props.id))} type="checkbox" />
         <p className={props.hasEnded ? "line-through" : ""}>{props.todo}</p>
       </div>
       <FontAwesomeIcon
