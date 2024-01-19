@@ -17,5 +17,4 @@ const Todo = (props) => {
     </div>
   );
 };
-
 export default Todo;

@@ -17,8 +17,7 @@ function App() {
       setNewTodo("");
     }
   };
-
-  const endTask = (index) => {
+const endTask = (index) => {
     const updatedTodos = [...todos];
     updatedTodos[index].hasEnded = !updatedTodos[index].hasEnded;
     setTodos(updatedTodos);
@@ -62,5 +61,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
