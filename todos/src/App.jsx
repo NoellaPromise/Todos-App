@@ -1,5 +1,4 @@
 import Todo from "./components/Todo";
-
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -60,5 +59,4 @@ const endTask = (index) => {
     </div>
   );
 }
-
 export default App;
