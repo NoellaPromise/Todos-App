@@ -1,7 +1,7 @@
 # My Todo App
 This is an application that track someone's todos. When you are done working on one task you just check it and automatically , the line strikes through it.
 
-## Technogies used 
+## Technologies used 
 - React 
 - Redux
 - Tailwind
